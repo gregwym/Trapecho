@@ -9,7 +9,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/bootstrap-responsive.min.css'); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('style.css'); ?>" />
+<?php if (in_array('enablePrettify', $this->options->codePrettify)): ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/prettify.css'); ?>" />
+<?php endif; ?>
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -26,7 +28,11 @@
 <?php $this->header(); ?>
 </head>
 
-<body onload="prettyPrint()">
+<body 
+<?php if (in_array('enablePrettify', $this->options->codePrettify)): ?>
+onload="prettyPrint()"
+<?php endif; ?>
+>
 
 <div class="container">
 
