@@ -4,7 +4,7 @@
  * 
  * @package Trapecho Theme 
  * @author Greg Wang
- * @version 1.0.0
+ * @version 1.0.2
  * @link http://dolast.com/pages/trapecho
  */
  

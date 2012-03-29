@@ -11,7 +11,9 @@
 
 <script src="<?php $this->options->themeUrl('js/jquery-1.7.1.min.js'); ?>"></script>
 <script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
+<?php if (in_array('enablePrettify', $this->options->codePrettify)): ?>
 <script src="<?php $this->options->themeUrl('js/prettify.js'); ?>"></script>
+<?php endif;?>
 <script type="text/javascript">
     // fix navbar on scroll
     var $win = $(window)
@@ -37,7 +39,9 @@
     $('.page-navigator li:not(:has(a))').html('<a>...</a>');
     $('.page-navigator .current').addClass('active');
     
+    <?php if (in_array('enablePrettify', $this->options->codePrettify)): ?>
     $('pre').addClass('prettyprint linenums');
+    <?php endif;?>
     $('.entry-content a').attr('target','_blank');
 </script>
 <?php $this->footer(); ?>

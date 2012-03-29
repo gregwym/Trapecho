@@ -22,4 +22,11 @@ function themeConfig($form) {
     array('ShowRelatedPosts', 'ShowRecentComments', 'ShowTags', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
     
     $form->addInput($sidebarBlock->multiMode());
+    
+    $codePrettify = new Typecho_Widget_Helper_Form_Element_Checkbox('codePrettify', 
+    array(
+    'EnablePrettify' => _t('启用')), 
+    array('enablePrettify'), _t('Google Code Prettify'));
+    
+    $form->addInput($codePrettify->multiMode());
 }
