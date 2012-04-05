@@ -61,7 +61,7 @@ a:hover {
 
 /* Comment list styles
 -------------------------------------------------- */
-.comment-list li {
+.comment-list .comment-body {
   min-height: 20px;
   padding: 19px;
   margin: 8px;
