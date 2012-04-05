@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/bootstrap-responsive.min.css'); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('style.css'); ?>" />
-<?php if (in_array('enablePrettify', $this->options->codePrettify)): ?>
+<?php if ($this->options->codePrettify != null && in_array('EnablePrettify', $this->options->codePrettify)): ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php $this->options->themeUrl('css/prettify.css'); ?>" />
 <?php endif; ?>
 
@@ -28,11 +28,11 @@
 <?php $this->header(); ?>
 </head>
 
-<body 
-<?php if (in_array('enablePrettify', $this->options->codePrettify)): ?>
-onload="prettyPrint()"
+<?php if ($this->options->codePrettify != null && in_array('EnablePrettify', $this->options->codePrettify)): ?>
+<body onload="prettyPrint()">
+<?php else: ?>
+<body>
 <?php endif; ?>
->
 
 <div class="container">
 

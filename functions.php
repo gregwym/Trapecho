@@ -26,7 +26,7 @@ function themeConfig($form) {
     $codePrettify = new Typecho_Widget_Helper_Form_Element_Checkbox('codePrettify', 
     array(
     'EnablePrettify' => _t('启用')), 
-    array('enablePrettify'), _t('Google Code Prettify'));
+    array('EnablePrettify'), _t('Google Code Prettify'));
     
     $form->addInput($codePrettify->multiMode());
 }
